@@ -41,7 +41,19 @@ vec_b = np.array([5, 6 , 7, 8])
 print(vec_a[0])
 print(vec_a * 2)
 print(vec_a + vec_b)
-print(np.mean(vec_a))
+
+#randomness
+import matplotli.pyplot as plt
+
+np.random.seed(625)
+randomvar_a = np.random.normal(loc = 10, scale = 1, size = 10)
+print(randomvar_a)
+
+plt.hist(x = randomvar_a)
+plt.xlabel("Variable A")
+plt.ylabel("Frequency")
+plt.title("Frequency Chart of Variable A")
+plt.show()
 
 
 
