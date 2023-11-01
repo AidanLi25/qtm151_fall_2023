@@ -99,8 +99,8 @@ Try it yourself!
 -- Select a new driver id (needs to be unique)
 -- Make sure to deparate arguments by a semicolon!
 
-
-
+INSERT INTO drivers VALUES (5, 'Max Verstappen', 'Dutch', 51);
+INSERT INTO drivers VALUES (6, 'Max Juan Pablo Montoya', 'Colombian', 6);
 -- SQLBook: Markup
 # <span style="color:darkblue"> II. Dataset Operations </span>
 
@@ -113,6 +113,7 @@ Extracting columns from table
 -- FROM is used to indicate the source table
 
 SELECT driver_id, nationality FROM drivers;
+
 -- SQLBook: Markup
 <font size="5"> 
 
@@ -131,7 +132,7 @@ WHERE nationality = 'German';
 
 -- Evalute OR conditions
 SELECT * FROM drivers
-WHERE (nationality = 'United States') OR (nationality = 'Indian');
+WHERE (nationality = 'United States');
 
 -- Evaluate AND conditions
 SELECT * FROM drivers
@@ -187,7 +188,8 @@ with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
 
-
+SELECT driver_name, nationality, driver_id FROM drivers
+WHERE victories > 60; 
 
 -- SQLBook: Markup
 # <span style="color:darkblue"> III. Groupby + Chaining </span>
